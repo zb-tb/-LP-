@@ -7,54 +7,51 @@
     <title>千葉・埼玉・茨城のガス給湯器交換は「給湯のトクゾー」にお任せ！</title>
     <script>
         (() => {
-        diff --git a//Users/kenji/マイドライブ/Development/zerobox-management/06_projects/kyuto-takumi-replication/index.html b//Users/kenji/マイドライブ/Development/zerobox-management/06_projects/kyuto-takumi-replication/index.html
---- a//Users/kenji/マイドライブ/Development/zerobox-management/06_projects/kyuto-takumi-replication/index.html
-+++ b//Users/kenji/マイドライブ/Development/zerobox-management/06_projects/kyuto-takumi-replication/index.html
-@@ -10,5 +10,6 @@
-             const path = window.location.pathname;
--            const lastSegment = path.split('/').filter(Boolean).at(-1) ?? '';
-+            const segments = path.split('/').filter(Boolean);
-+            const lastSegment = segments.at(-1) ?? '';
-             const looksLikeFile = /\.[a-zA-Z0-9]+$/.test(lastSegment);
--            const basePath = path.endsWith('/')
-+            const currentDir = path.endsWith('/')
-                 ? path
-@@ -19,4 +20,33 @@
-             const base = document.createElement('base');
--            base.href = basePath;
-+            base.href = currentDir;
-             document.head.appendChild(base);
-+
-+            const repoRoot = segments.length > 0 ? `/${segments[0]}/` : '/';
-+            const assetBases = Array.from(new Set([
-+                `${currentDir}assets/`,
-+                `${repoRoot}assets/`,
-+                '/assets/'
-+            ]));
-+
-+            const toAssetName = (src) =>
-+                src.replace(/^https?:\/\/[^/]+/i, '').replace(/^\.?\//, '').replace(/^assets\//, '');
-+
-+            document.addEventListener('DOMContentLoaded', () => {
-+                document.querySelectorAll('img[src*="assets/"]').forEach((img) => {
-+                    const original = img.getAttribute('src');
-+                    if (!original) return;
-+
-+                    const assetName = toAssetName(original);
-+                    const candidates = assetBases.map((assetBase) => `${assetBase}${assetName}`);
-+                    let candidateIndex = 0;
-+
-+                    const tryNext = () => {
-+                        if (candidateIndex >= candidates.length) return;
-+                        img.src = candidates[candidateIndex++];
-+                    };
-+
-+                    img.addEventListener('error', tryNext);
-+                    tryNext();
-+                });
-+            });
-         })();
+            const path = window.location.pathname;
+            const segments = path.split('/').filter(Boolean);
+            const lastSegment = segments.at(-1) ?? '';
+            const looksLikeFile = /\.[a-zA-Z0-9]+$/.test(lastSegment);
+            const currentDir = path.endsWith('/')
+                ? path
+                : looksLikeFile
+                    ? path.replace(/[^/]*$/, '')
+                    : `${path}/`;
 
+            const base = document.createElement('base');
+            base.href = currentDir;
+            document.head.appendChild(base);
+
+            const repoRoot = segments.length > 0 ? `/${segments[0]}/` : '/';
+            const projectAssets = `${repoRoot}06_projects/kyuto-takumi-replication/assets/`;
+            const assetBases = Array.from(new Set([
+                projectAssets,
+                `${currentDir}assets/`,
+                `${repoRoot}assets/`,
+                '/assets/'
+            ]));
+
+            const toAssetName = (src) =>
+                src.replace(/^https?:\/\/[^/]+/i, '').replace(/^\.?\//, '').replace(/^assets\//, '');
+
+            document.addEventListener('DOMContentLoaded', () => {
+                document.querySelectorAll('img[src*="assets/"]').forEach((img) => {
+                    const original = img.getAttribute('src');
+                    if (!original) return;
+
+                    const assetName = toAssetName(original);
+                    const candidates = assetBases.map((assetBase) => `${assetBase}${assetName}`);
+                    let candidateIndex = 0;
+
+                    const tryNext = () => {
+                        if (candidateIndex >= candidates.length) return;
+                        img.src = candidates[candidateIndex++];
+                    };
+
+                    img.addEventListener('error', tryNext);
+                    tryNext();
+                });
+            });
+        })();
     </script>
     <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -484,4 +481,3 @@
 </body>
 
 </html>
-
