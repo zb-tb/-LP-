@@ -5,54 +5,6 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>千葉・埼玉・茨城のガス給湯器交換は「給湯のトクゾー」にお任せ！</title>
-    <script>
-        (() => {
-            const path = window.location.pathname;
-            const segments = path.split('/').filter(Boolean);
-            const lastSegment = segments.at(-1) ?? '';
-            const looksLikeFile = /\.[a-zA-Z0-9]+$/.test(lastSegment);
-            const currentDir = path.endsWith('/')
-                ? path
-                : looksLikeFile
-                    ? path.replace(/[^/]*$/, '')
-                    : `${path}/`;
-
-            const base = document.createElement('base');
-            base.href = currentDir;
-            document.head.appendChild(base);
-
-            const repoRoot = segments.length > 0 ? `/${segments[0]}/` : '/';
-            const projectAssets = `${repoRoot}06_projects/kyuto-takumi-replication/assets/`;
-            const assetBases = Array.from(new Set([
-                projectAssets,
-                `${currentDir}assets/`,
-                `${repoRoot}assets/`,
-                '/assets/'
-            ]));
-
-            const toAssetName = (src) =>
-                src.replace(/^https?:\/\/[^/]+/i, '').replace(/^\.?\//, '').replace(/^assets\//, '');
-
-            document.addEventListener('DOMContentLoaded', () => {
-                document.querySelectorAll('img[src*="assets/"]').forEach((img) => {
-                    const original = img.getAttribute('src');
-                    if (!original) return;
-
-                    const assetName = toAssetName(original);
-                    const candidates = assetBases.map((assetBase) => `${assetBase}${assetName}`);
-                    let candidateIndex = 0;
-
-                    const tryNext = () => {
-                        if (candidateIndex >= candidates.length) return;
-                        img.src = candidates[candidateIndex++];
-                    };
-
-                    img.addEventListener('error', tryNext);
-                    tryNext();
-                });
-            });
-        })();
-    </script>
     <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -132,20 +84,20 @@
 
                 <!-- Left Content: Catchphrase & Badges -->
                 <div class="w-full md:w-1/2 text-center md:text-left pt-10">
-                    <img src="./assets/mv_catch.png" alt="給湯器のトラブル即解決！"
+                    <img src="./mv_catch.png" alt="給湯器のトラブル即解決！"
                         class="w-full max-w-lg mx-auto md:mx-0 mb-8 animate-fade-in-up">
 
                     <!-- Badges Grid -->
                     <div class="flex flex-wrap justify-center md:justify-start gap-4 max-w-xl mx-auto md:mx-0">
-                        <img src="./assets/mv_catch-list01.png" alt="最短即日"
+                        <img src="./mv_catch-list01.png" alt="最短即日"
                             class="w-24 md:w-28 shadow-md rounded-full bg-white">
-                        <img src="./assets/mv_catch-list02.png" alt="地域最安値"
+                        <img src="./mv_catch-list02.png" alt="地域最安値"
                             class="w-24 md:w-28 shadow-md rounded-full bg-white">
-                        <img src="./assets/mv_catch-list03.png" alt="女性スタッフ"
+                        <img src="./mv_catch-list03.png" alt="女性スタッフ"
                             class="w-24 md:w-28 shadow-md rounded-full bg-white">
-                        <img src="./assets/mv_catch-list04.png" alt="有資格者"
+                        <img src="./mv_catch-list04.png" alt="有資格者"
                             class="w-24 md:w-28 shadow-md rounded-full bg-white">
-                        <img src="./assets/mv_catch-list05.png" alt="10年保証"
+                        <img src="./mv_catch-list05.png" alt="10年保証"
                             class="w-24 md:w-28 shadow-md rounded-full bg-white">
                     </div>
 
@@ -161,10 +113,10 @@
                 <!-- Right Content: Hero Images Composition -->
                 <div class="w-full md:w-1/2 relative mt-10 md:mt-0 h-[300px] md:h-[500px]">
                     <!-- Absolute positioned images to recreate the collage -->
-                    <img src="./assets/mv_img-rt.png" class="absolute top-0 right-0 w-2/3 z-10 animate-float-slow">
-                    <img src="./assets/mv_img-lt.png" class="absolute top-20 left-0 w-1/2 z-20 animate-float-delayed">
-                    <img src="./assets/mv_img-rb.png" class="absolute bottom-0 right-10 w-1/2 z-30">
-                    <img src="./assets/mv_img-lb.png" class="absolute bottom-10 left-10 w-1/3 z-40">
+                    <img src="./mv_img-rt.png" class="absolute top-0 right-0 w-2/3 z-10 animate-float-slow">
+                    <img src="./mv_img-lt.png" class="absolute top-20 left-0 w-1/2 z-20 animate-float-delayed">
+                    <img src="./mv_img-rb.png" class="absolute bottom-0 right-10 w-1/2 z-30">
+                    <img src="./mv_img-lb.png" class="absolute bottom-10 left-10 w-1/3 z-40">
                 </div>
             </div>
         </div>
