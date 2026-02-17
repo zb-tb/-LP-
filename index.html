@@ -1,0 +1,451 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>千葉・埼玉・茨城のガス給湯器交換は「給湯のトクゾー」にお任せ！</title>
+    <script>
+        (() => {
+            const path = window.location.pathname;
+            const lastSegment = path.split('/').filter(Boolean).at(-1) ?? '';
+            const looksLikeFile = /\.[a-zA-Z0-9]+$/.test(lastSegment);
+            const basePath = path.endsWith('/')
+                ? path
+                : looksLikeFile
+                    ? path.replace(/[^/]*$/, '')
+                    : `${path}/`;
+
+            const base = document.createElement('base');
+            base.href = basePath;
+            document.head.appendChild(base);
+        })();
+    </script>
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700;900&display=swap"
+        rel="stylesheet">
+    <!-- Tailwind CSS -->
+    <script src="./tailwind.config.js"></script>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        body {
+            font-family: 'Noto Sans JP', sans-serif;
+            color: #333;
+        }
+
+        .hero-gradient {
+            background: linear-gradient(135deg, #e0f7fa 0%, #ffffff 100%);
+        }
+
+        .clip-triangle {
+            clip-path: polygon(0 0, 100% 0, 100% 85%, 50% 100%, 0 85%);
+        }
+
+        details>summary {
+            list-style: none;
+        }
+
+        details>summary::-webkit-details-marker {
+            display: none;
+        }
+    </style>
+</head>
+
+<body class="bg-white">
+
+    <!-- Header -->
+    <header class="fixed top-0 w-full z-50 bg-white/95 backdrop-blur shadow-sm border-b border-gray-100">
+        <div class="container mx-auto flex justify-between items-center h-20 md:h-24 px-4">
+            <!-- Logo -->
+            <a href="#"
+                class="flex items-center gap-2 text-2xl font-bold text-primary tracking-tighter no-underline hover:opacity-80 transition">
+                <!-- <img src="./assets/logo.svg" alt="給湯のトクゾー" class="h-10 md:h-14"> -->
+                給湯のトクゾー
+            </a>
+
+            <!-- Contact Info (Desktop) -->
+            <div class="hidden md:flex items-center gap-6">
+                <div class="text-right">
+                    <p class="text-xs text-gray-500 mb-1">お見積り・相談無料！8:00〜19:00受付</p>
+                    <a href="tel:04-7125-1537" class="text-3xl font-bold text-primary font-sans tracking-tight">
+                        <span class="text-xl">📞</span> 04-7125-1537
+                    </a>
+                </div>
+                <!-- Buttons -->
+                <div class="flex gap-2">
+                    <a href="#contact"
+                        class="bg-accent hover:bg-orange-500 text-white font-bold py-3 px-5 rounded-full shadow-lg transition transform hover:scale-105">
+                        無料お見積り
+                    </a>
+                    <a href="tel:04-7125-1537"
+                        class="bg-line-green hover:bg-green-500 text-white font-bold py-3 px-5 rounded-full shadow-lg transition transform hover:scale-105 flex items-center gap-2">
+                        <span class="text-lg">📞</span> 今すぐお電話
+                    </a>
+                </div>
+            </div>
+
+            <!-- Mobile Menu Button (Placeholder) -->
+            <button class="md:hidden text-primary text-3xl">
+                ☰
+            </button>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="mt-20 md:mt-24 pt-10 pb-20 hero-gradient relative overflow-hidden">
+        <div class="container mx-auto relative z-10 px-4">
+            <div class="flex flex-col md:flex-row items-center justify-between">
+
+                <!-- Left Content: Catchphrase & Badges -->
+                <div class="w-full md:w-1/2 text-center md:text-left pt-10">
+                    <img src="./assets/mv_catch.png" alt="給湯器のトラブル即解決！"
+                        class="w-full max-w-lg mx-auto md:mx-0 mb-8 animate-fade-in-up">
+
+                    <!-- Badges Grid -->
+                    <div class="flex flex-wrap justify-center md:justify-start gap-4 max-w-xl mx-auto md:mx-0">
+                        <img src="./assets/mv_catch-list01.png" alt="最短即日"
+                            class="w-24 md:w-28 shadow-md rounded-full bg-white">
+                        <img src="./assets/mv_catch-list02.png" alt="地域最安値"
+                            class="w-24 md:w-28 shadow-md rounded-full bg-white">
+                        <img src="./assets/mv_catch-list03.png" alt="女性スタッフ"
+                            class="w-24 md:w-28 shadow-md rounded-full bg-white">
+                        <img src="./assets/mv_catch-list04.png" alt="有資格者"
+                            class="w-24 md:w-28 shadow-md rounded-full bg-white">
+                        <img src="./assets/mv_catch-list05.png" alt="10年保証"
+                            class="w-24 md:w-28 shadow-md rounded-full bg-white">
+                    </div>
+
+                    <!-- CTA Buttons -->
+                    <div class="mt-10 flex flex-col sm:flex-row gap-4 justify-center md:justify-start">
+                        <a href="#contact"
+                            class="bg-accent text-white text-xl font-bold py-4 px-10 rounded-full shadow-xl hover:bg-orange-500 transition text-center">
+                            まずは無料でお見積り ＞
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Right Content: Hero Images Composition -->
+                <div class="w-full md:w-1/2 relative mt-10 md:mt-0 h-[300px] md:h-[500px]">
+                    <!-- Absolute positioned images to recreate the collage -->
+                    <img src="./assets/mv_img-rt.png" class="absolute top-0 right-0 w-2/3 z-10 animate-float-slow">
+                    <img src="./assets/mv_img-lt.png" class="absolute top-20 left-0 w-1/2 z-20 animate-float-delayed">
+                    <img src="./assets/mv_img-rb.png" class="absolute bottom-0 right-10 w-1/2 z-30">
+                    <img src="./assets/mv_img-lb.png" class="absolute bottom-10 left-10 w-1/3 z-40">
+                </div>
+            </div>
+        </div>
+
+        <!-- Background Decor -->
+        <div class="absolute bottom-0 w-full h-16 md:h-20 bg-white clip-triangle"></div>
+    </section>
+
+    <!-- 8 Reasons Section -->
+    <section class="py-20 bg-white">
+        <div class="container mx-auto px-4">
+            <h2 class="text-center text-3xl md:text-4xl font-bold text-primary mb-16">
+                給湯のトクゾーが選ばれる<br class="md:hidden">
+                <span class="text-accent text-5xl">理由</span>
+            </h2>
+
+            <!-- 8 Grid Layout -->
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+                <!-- 01 -->
+                <div
+                    class="bg-slate-50 border border-slate-200 rounded-xl p-6 relative shadow hover:shadow-lg transition">
+                    <div class="text-accent text-lg font-bold mb-2">01</div>
+                    <h3 class="text-xl font-bold text-primary mb-2">最短即日対応</h3>
+                    <p class="text-gray-600 text-sm">地域密着だからできるスピード対応。お湯が出ないトラブルも即解決。</p>
+                </div>
+                <!-- 02 -->
+                <div
+                    class="bg-slate-50 border border-slate-200 rounded-xl p-6 relative shadow hover:shadow-lg transition">
+                    <div class="text-accent text-lg font-bold mb-2">02</div>
+                    <h3 class="text-xl font-bold text-primary mb-2">安心の工事保証10年</h3>
+                    <p class="text-gray-600 text-sm">商品＋工事のダブル保証で、設置後も長く安心が続きます。</p>
+                </div>
+                <!-- 03 -->
+                <div
+                    class="bg-slate-50 border border-slate-200 rounded-xl p-6 relative shadow hover:shadow-lg transition">
+                    <div class="text-accent text-lg font-bold mb-2">03</div>
+                    <h3 class="text-xl font-bold text-primary mb-2">メーカー直仕入で最大80%OFF</h3>
+                    <p class="text-gray-600 text-sm">中間マージンをカットし、高品質な給湯器を驚きの低価格で提供。</p>
+                </div>
+                <!-- 04 -->
+                <div
+                    class="bg-slate-50 border border-slate-200 rounded-xl p-6 relative shadow hover:shadow-lg transition">
+                    <div class="text-accent text-lg font-bold mb-2">04</div>
+                    <h3 class="text-xl font-bold text-primary mb-2">見積後の追加費用は一切無し</h3>
+                    <p class="text-gray-600 text-sm">現地調査後の確定お見積りから、追加料金が発生することはございません。</p>
+                </div>
+                <!-- 05 -->
+                <div
+                    class="bg-slate-50 border border-slate-200 rounded-xl p-6 relative shadow hover:shadow-lg transition">
+                    <div class="text-accent text-lg font-bold mb-2">05</div>
+                    <h3 class="text-xl font-bold text-primary mb-2">土日祝日対応</h3>
+                    <p class="text-gray-600 text-sm">平日お忙しい方も安心。土日祝日も変わらず工事対応いたします。</p>
+                </div>
+                <!-- 06 -->
+                <div
+                    class="bg-slate-50 border border-slate-200 rounded-xl p-6 relative shadow hover:shadow-lg transition">
+                    <div class="text-accent text-lg font-bold mb-2">06</div>
+                    <h3 class="text-xl font-bold text-primary mb-2">完全自社施工で一括管理</h3>
+                    <p class="text-gray-600 text-sm">下請け丸投げなし。受付から施工まで自社スタッフが責任を持って担当。</p>
+                </div>
+                <!-- 07 -->
+                <div
+                    class="bg-slate-50 border border-slate-200 rounded-xl p-6 relative shadow hover:shadow-lg transition">
+                    <div class="text-accent text-lg font-bold mb-2">07</div>
+                    <h3 class="text-xl font-bold text-primary mb-2">元大手ガス会社スタッフも多数在籍</h3>
+                    <p class="text-gray-600 text-sm">経験豊富なプロフェッショナルが、確実で安全な工事を行います。</p>
+                </div>
+                <!-- 08 -->
+                <div
+                    class="bg-slate-50 border border-slate-200 rounded-xl p-6 relative shadow hover:shadow-lg transition">
+                    <div class="text-accent text-lg font-bold mb-2">08</div>
+                    <h3 class="text-xl font-bold text-primary mb-2">女性スタッフが同行可能で安心</h3>
+                    <p class="text-gray-600 text-sm">一人暮らしの女性や高齢者の方も安心してご依頼いただけます。</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Works / Customer Voice -->
+    <section class="py-20 bg-gray-50">
+        <div class="container mx-auto px-4">
+            <h2 class="text-center text-3xl font-bold text-primary mb-10">施工事例・お客様の声</h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+                <!-- Example 1 -->
+                <div class="bg-white rounded-lg shadow-md overflow-hidden">
+                    <div class="h-48 bg-gray-200 flex items-center justify-center text-gray-400 font-bold">施工写真</div>
+                    <div class="p-4">
+                        <p class="text-sm text-gray-500 mb-1">野田市 O様邸</p>
+                        <h3 class="font-bold text-lg mb-2">急な故障も即日対応で助かりました</h3>
+                        <div class="flex text-yellow-400 mb-2">★★★★★</div>
+                        <p class="text-gray-600 text-sm">お湯が出なくなり困っていましたが、電話してその日のうちに来てくれました。</p>
+                    </div>
+                </div>
+                <!-- Example 2 -->
+                <div class="bg-white rounded-lg shadow-md overflow-hidden">
+                    <div class="h-48 bg-gray-200 flex items-center justify-center text-gray-400 font-bold">施工写真</div>
+                    <div class="p-4">
+                        <p class="text-sm text-gray-500 mb-1">流山市 K様邸</p>
+                        <h3 class="font-bold text-lg mb-2">丁寧な説明と安さが決め手</h3>
+                        <div class="flex text-yellow-400 mb-2">★★★★★</div>
+                        <p class="text-gray-600 text-sm">他社と相見積もりを取りましたが、一番安く、説明も親切でした。</p>
+                    </div>
+                </div>
+                <!-- Example 3 -->
+                <div class="bg-white rounded-lg shadow-md overflow-hidden">
+                    <div class="h-48 bg-gray-200 flex items-center justify-center text-gray-400 font-bold">施工写真</div>
+                    <div class="p-4">
+                        <p class="text-sm text-gray-500 mb-1">柏市 S様邸</p>
+                        <h3 class="font-bold text-lg mb-2">10年保証で安心です</h3>
+                        <div class="flex text-yellow-400 mb-2">★★★★★</div>
+                        <p class="text-gray-600 text-sm">工事後の保証もしっかりしているので、安心して任せられました。</p>
+                    </div>
+                </div>
+                <!-- Example 4 -->
+                <div class="bg-white rounded-lg shadow-md overflow-hidden">
+                    <div class="h-48 bg-gray-200 flex items-center justify-center text-gray-400 font-bold">施工写真</div>
+                    <div class="p-4">
+                        <p class="text-sm text-gray-500 mb-1">春日部市 M様邸</p>
+                        <h3 class="font-bold text-lg mb-2">LINEで見積もりが取れて便利</h3>
+                        <div class="flex text-yellow-400 mb-2">★★★★☆</div>
+                        <p class="text-gray-600 text-sm">写真を送るだけで概算見積もりが分かり、スムーズに依頼できました。</p>
+                    </div>
+                </div>
+                <!-- Example 5 -->
+                <div class="bg-white rounded-lg shadow-md overflow-hidden">
+                    <div class="h-48 bg-gray-200 flex items-center justify-center text-gray-400 font-bold">施工写真</div>
+                    <div class="p-4">
+                        <p class="text-sm text-gray-500 mb-1">松戸市 T様邸</p>
+                        <h3 class="font-bold text-lg mb-2">女性スタッフ同行で安心</h3>
+                        <div class="flex text-yellow-400 mb-2">★★★★★</div>
+                        <p class="text-gray-600 text-sm">日中は妻しか家にいないため、女性スタッフの方に来ていただき安心しました。</p>
+                    </div>
+                </div>
+                <!-- Example 6 -->
+                <div class="bg-white rounded-lg shadow-md overflow-hidden">
+                    <div class="h-48 bg-gray-200 flex items-center justify-center text-gray-400 font-bold">施工写真</div>
+                    <div class="p-4">
+                        <p class="text-sm text-gray-500 mb-1">越谷市 Y様邸</p>
+                        <h3 class="font-bold text-lg mb-2">プロの職人技に感動</h3>
+                        <div class="flex text-yellow-400 mb-2">★★★★★</div>
+                        <p class="text-gray-600 text-sm">配管の保温処理など、見えないところまで丁寧に作業してくれました。</p>
+                    </div>
+                </div>
+            </div>
+            <div class="text-center mt-10">
+                <a href="#"
+                    class="inline-block border-2 border-primary text-primary font-bold py-3 px-8 rounded-full hover:bg-primary hover:text-white transition">もっと見る
+                    ＞</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ Section (7 items) -->
+    <section class="py-20 bg-white">
+        <div class="container mx-auto max-w-4xl px-4">
+            <h2 class="text-center text-3xl font-bold text-primary mb-10">よくあるご質問</h2>
+            <div class="space-y-4">
+                <!-- FAQ 1 -->
+                <details class="group bg-slate-50 rounded-lg p-4 border border-slate-200 cursor-pointer">
+                    <summary class="flex justify-between items-center font-bold text-lg list-none text-gray-800">
+                        <span>Q. 土日祝日も対応してもらえますか？</span>
+                        <span class="transition group-open:rotate-180">▼</span>
+                    </summary>
+                    <div
+                        class="text-gray-600 mt-4 leading-relaxed group-open:animate-fade-in pl-4 border-l-2 border-accent">
+                        はい、土日祝日も平日と変わらず対応しております。追加料金などもかかりませんので、ご都合の良い日程をお申し付けください。
+                    </div>
+                </details>
+                <!-- FAQ 2 -->
+                <details class="group bg-slate-50 rounded-lg p-4 border border-slate-200 cursor-pointer">
+                    <summary class="flex justify-between items-center font-bold text-lg list-none text-gray-800">
+                        <span>Q. オール電化からガス給湯器にも交換できますか？</span>
+                        <span class="transition group-open:rotate-180">▼</span>
+                    </summary>
+                    <div
+                        class="text-gray-600 mt-4 leading-relaxed group-open:animate-fade-in pl-4 border-l-2 border-accent">
+                        はい、可能です。電気温水器やエコキュートから、省エネ性能の高いガス給湯器（エコジョーズ）への交換工事も多数実績がございます。
+                    </div>
+                </details>
+                <!-- FAQ 3 -->
+                <details class="group bg-slate-50 rounded-lg p-4 border border-slate-200 cursor-pointer">
+                    <summary class="flex justify-between items-center font-bold text-lg list-none text-gray-800">
+                        <span>Q. 写真を送ったり苦手なので見に来てくれますか？</span>
+                        <span class="transition group-open:rotate-180">▼</span>
+                    </summary>
+                    <div
+                        class="text-gray-600 mt-4 leading-relaxed group-open:animate-fade-in pl-4 border-l-2 border-accent">
+                        もちろん可能です。現地調査は無料で行っておりますので、LINEやメールでのやり取りが苦手な方もお電話でその旨お伝えください。
+                    </div>
+                </details>
+                <!-- FAQ 4 -->
+                <details class="group bg-slate-50 rounded-lg p-4 border border-slate-200 cursor-pointer">
+                    <summary class="flex justify-between items-center font-bold text-lg list-none text-gray-800">
+                        <span>Q. 工事保証ってどこまで保証してくれるの？</span>
+                        <span class="transition group-open:rotate-180">▼</span>
+                    </summary>
+                    <div
+                        class="text-gray-600 mt-4 leading-relaxed group-open:animate-fade-in pl-4 border-l-2 border-accent">
+                        工事起因によるトラブル（水漏れ、配管の接続不良など）を10年間無料で保証いたします。商品自体のメーカー保証と合わせて安心です。
+                    </div>
+                </details>
+                <!-- FAQ 5 -->
+                <details class="group bg-slate-50 rounded-lg p-4 border border-slate-200 cursor-pointer">
+                    <summary class="flex justify-between items-center font-bold text-lg list-none text-gray-800">
+                        <span>Q. 商品をネットで購入したのですが取付だけでもお願いできますか？</span>
+                        <span class="transition group-open:rotate-180">▼</span>
+                    </summary>
+                    <div
+                        class="text-gray-600 mt-4 leading-relaxed group-open:animate-fade-in pl-4 border-l-2 border-accent">
+                        はい、施主支給（お客様支給）による工事のみのご依頼も承っております。適合確認などが必要ですので、まずはご相談ください。
+                    </div>
+                </details>
+                <!-- FAQ 6 -->
+                <details class="group bg-slate-50 rounded-lg p-4 border border-slate-200 cursor-pointer">
+                    <summary class="flex justify-between items-center font-bold text-lg list-none text-gray-800">
+                        <span>Q. 支払方法を教えてください。</span>
+                        <span class="transition group-open:rotate-180">▼</span>
+                    </summary>
+                    <div
+                        class="text-gray-600 mt-4 leading-relaxed group-open:animate-fade-in pl-4 border-l-2 border-accent">
+                        現金払い、銀行振込、各種クレジットカード決済、リフォームローン（分割払い）に対応しております。施工完了後にお支払いいただきます。
+                    </div>
+                </details>
+                <!-- FAQ 7 -->
+                <details class="group bg-slate-50 rounded-lg p-4 border border-slate-200 cursor-pointer">
+                    <summary class="flex justify-between items-center font-bold text-lg list-none text-gray-800">
+                        <span>Q. 夜間に給湯器が壊れました。すぐ対応可能ですか？</span>
+                        <span class="transition group-open:rotate-180">▼</span>
+                    </summary>
+                    <div
+                        class="text-gray-600 mt-4 leading-relaxed group-open:animate-fade-in pl-4 border-l-2 border-accent">
+                        可能な限り対応いたします。夜間・早朝の緊急対応も行っておりますので、まずはお電話にて状況をお知らせください。（在庫状況により翌日対応となる場合もございます）
+                    </div>
+                </details>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="py-20 bg-gradient-to-b from-slate-100 to-white">
+        <div class="container mx-auto max-w-3xl px-4">
+            <div class="bg-white rounded-2xl shadow-xl p-8 md:p-12 border-t-8 border-accent">
+                <h2 class="text-center text-3xl font-bold text-primary mb-2">無料お見積り・ご相談</h2>
+                <p class="text-center text-gray-500 mb-8">お急ぎの方はお電話がスムーズです</p>
+
+                <!-- Phone CTA -->
+                <div class="bg-slate-50 rounded-xl p-6 text-center mb-8 border border-slate-200">
+                    <p class="text-sm text-gray-500 mb-1">8:00〜19:00受付中</p>
+                    <a href="tel:04-7125-1537"
+                        class="text-4xl md:text-5xl font-bold text-primary font-sans tracking-tight block hover:opacity-80 transition">
+                        04-7125-1537
+                    </a>
+                </div>
+
+                <!-- Form -->
+                <form class="space-y-6">
+                    <div>
+                        <label class="block text-gray-700 font-bold mb-2">お名前 <span
+                                class="text-red-500">*</span></label>
+                        <input type="text"
+                            class="w-full px-4 py-3 rounded-lg border border-gray-300 focus:border-primary focus:ring-2 focus:ring-primary/20 outline-none transition"
+                            placeholder="野田 太郎">
+                    </div>
+                    <div>
+                        <label class="block text-gray-700 font-bold mb-2">電話番号 <span
+                                class="text-red-500">*</span></label>
+                        <input type="tel"
+                            class="w-full px-4 py-3 rounded-lg border border-gray-300 focus:border-primary focus:ring-2 focus:ring-primary/20 outline-none transition"
+                            placeholder="090-1234-5678">
+                    </div>
+                    <div>
+                        <label class="block text-gray-700 font-bold mb-2">ご相談内容</label>
+                        <textarea
+                            class="w-full px-4 py-3 rounded-lg border border-gray-300 focus:border-primary focus:ring-2 focus:ring-primary/20 outline-none transition h-32"
+                            placeholder="給湯器から異音がする、お湯が出ない、など"></textarea>
+                    </div>
+                    <button type="submit"
+                        class="w-full bg-accent hover:bg-orange-500 text-white font-bold py-4 rounded-lg shadow-lg text-xl transition transform hover:scale-[1.02]">
+                        送信して見積りを依頼する
+                    </button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-gray-800 text-white py-12">
+        <div class="container mx-auto px-4 text-center md:text-left">
+            <div class="flex flex-col md:flex-row justify-between items-center mb-8">
+                <div class="mb-6 md:mb-0">
+                    <h2 class="text-2xl font-bold mb-2">給湯のトクゾー</h2>
+                    <p class="text-gray-400 text-sm">
+                        有限会社渡辺燃料店<br>
+                        〒278-0003 千葉県野田市鶴奉3番地<br>
+                        Mail: info@watanabe-fuel.com<br>
+                        対応エリア：千葉県・埼玉県・茨城県
+                    </p>
+                </div>
+                <div class="flex gap-4">
+                    <!-- Social Icons or Links -->
+                </div>
+            </div>
+            <div
+                class="border-t border-gray-700 pt-8 flex flex-col md:flex-row justify-between items-center text-sm text-gray-400">
+                <p class="mb-2 md:mb-0">© Watanabe Fuel Store. All Rights Reserved.</p>
+                <div class="flex gap-6">
+                    <a href="#" class="hover:text-white transition">特定商取引法に基づく表記</a>
+                    <a href="#" class="hover:text-white transition">プライバシーポリシー</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+</body>
+
+</html>
